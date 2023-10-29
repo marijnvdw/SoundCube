@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #313338;
+    word-spacing: 3px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+p {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h3 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+div img {
+    border-radius: 10px;
+    width: 500px;
+}
+
+.info-text {
+    max-width: 60%;
+    font-size: 18px;
+}
+
+.info-text-2 {
+    max-width: 60%;
+    font-size: 22px;
+}
+
+/* ---------- */
+
+/* Navigation */
+nav {
+    display: flex;
+    background-color: #0f0f10;
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    height: 92px;
+}
+
+nav a {
+    display: flex;
+    padding: 10px;
+    color: #929cb0;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    margin: 10px;
+}
+
+nav a:hover {
+    background-color: #2a2a2d;
+    color: white;
+    border-radius: 10px;
+}
+
+nav img {
+    width: 15%;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+/* End navigation */
+
+/* Header */
+header {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    flex-direction: row
+}
+
+header h1 {
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    color: white;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+header div {
+    flex: 1;
+    display: flex;
+
+}
+
+.left-box {
+    background-color: #313338;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-width: 50%;
+}
+
+.left-box img {
+    height: 40%;
+    width: auto;
+    margin: 5px;
+}
+
+.right-box {
+    background-color: #1e1f22;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.right-box h1 {
+    flex: 1;
+}
+
+.right-box p {
+    flex: 3;
+}
+
+/* End header */
+
+/* Article */
+article {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    background-color: #040504;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    flex-direction: row
+}
+
+article h1 {
+    display: flex;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    text-align: center;
+    color: white;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+article div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch
+}
+
+.a-left-box {
+    background-color: #1e1f22;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    justify-content: flex-start
+}
+
+.a-right-box {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+}
+
+.a-right-box h1 {
+    flex: 1;
+}
+
+.a-right-box p {
+    flex: 3;
+}
+
+/* Carousel */
+.carousel-inner {
+    width: 100%;
+    display: flex;
+    align-items: stretch
+}
+
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-open:checked+.carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+.carousel-item {
+    position: fixed;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 1 ease-out;
+    align-items: stretch
+}
+
+.carousel-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+    margin-left: 66%;
+    margin-top: 330px;
+}
+
+.carousel-control.prev {
+    left: 2%;
+}
+
+.carousel-control.next {
+    right: 2%;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+    display: block;
+}
+
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    margin-left: 80%;
+    margin-right: 13%;
+}
+
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+    color: #428bca;
+}
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/* End carousel */
+
+/* End article */
+
+/* footer */
+
+footer {
+    display: flex;
+    height: 5vw;
+    background-color: #0f0f10;
+    color: white;
+    text-decoration: none;
+    color: #929cb0;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+footer a {
+    color: #929cb0;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center;
+}
+
+/* ------- */
